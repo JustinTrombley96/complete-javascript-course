@@ -36,9 +36,13 @@
 // // var lastName = prompt("What is his last name?");
 // // console.log(firstName + ' ' + lastName);
 
-/********************************************** 
+
+
+
+
+/************************************************************************
  *  Basic Operators
-*/
+ */
 // var now, yearJohn, yearMark
 // now =2020;
 // ageJohn = 28;
@@ -66,7 +70,11 @@
 // var x;
 // // console.log(typeof x);
 
-// /********************************************** 
+
+
+
+
+// /************************************************************************ 
 //  *  Operator Precedence
 // */
 
@@ -107,9 +115,14 @@
 // x++; This adds 1.
 // x--; This subtracts 1.
 
-/**************************************** 
-* Coding Challenge 1
-*/
+
+
+
+
+
+/************************************************************************ 
+ * Coding Challenge 1
+ */
 
 /* Efficent Way */
 
@@ -149,9 +162,14 @@
 
 // console.log ("Is Mark's BMI higher than John's? " + higherBmi);
 
-/**************************************** 
-* If / else statements
-*/
+
+
+
+
+
+/************************************************************************
+ * If / else statements
+ */
 
 // var firstName = 'John';
 // var civilStatus = 'single';
@@ -183,3 +201,130 @@
 // } else {
 //     console.log('John\'s BMI is higher than Mark\'s.');
 // }
+
+// var firstName = 'John';
+// var age = 28;
+// if (age < 13) {
+//     console.log(firstName + ' is a boy.');
+// } else if (age >= 13 && age < 20) {
+//     console.log(firstName + ' is a teenager.');
+// } else if (age >= 20 && age < 30) {
+//     console.log(firstName + ' is a young man.')
+// } else {
+//     console.log(firstName + ' is a man.')
+// }
+//And &&, OR ||, or Not !
+
+
+
+
+
+
+/************************************************************************ 
+ * The Ternary Operator and Switch Statements
+ */
+
+// var firstName = 'John';
+// var age = 25;
+
+// //Ternary Operator
+// age >= 18 ? console.log(firstName + ' drinks beer.') :
+//     console.log(firstName + ' drinks juice.')
+
+// var drink = age >= 18 ? 'beer' : 'juice';
+// console.log(drink);
+
+// if (age >= 18) {
+//     var drink = 'beer';
+// } else {
+//     var drink = 'juice';
+// }
+// console.log(drink)
+
+//Switch Statement
+// var job = 'teacher';
+// switch (job) {
+//     case 'teacher':
+//     case 'instructor':
+//         console.log(firstName + ' teaches kids how to code.')
+//         break;
+//     case 'driver':
+//         console.log(firstName + ' drives an uber in Lisbon.')
+//         break;
+//     case 'designer':
+//         console.log(firstName + ' designs beautiful websites.')
+//         break;
+// }
+
+// switch (true) {
+//     case age < 13:
+//         console.log(firstName + ' is a boy.');
+//         break;
+//     case age >= 13 && age < 20:
+//         console.log(firstName + ' is a teenager.');
+//         break;
+//     case age >= 20 && age < 30:
+//         console.log(firstName + ' is a young man.')
+//         break;
+//     default:
+//         console.log(firstName + ' is a man.')
+// }
+
+// var firstName = 'John';
+// var age = 28;
+// if (age < 13) {
+//     console.log(firstName + ' is a boy.');
+// } else if (age >= 13 && age < 20) {
+//     console.log(firstName + ' is a teenager.');
+// } else if (age >= 20 && age < 30) {
+//     console.log(firstName + ' is a young man.')
+// } else {
+//     console.log(firstName + ' is a man.')
+// }
+
+
+
+
+
+
+/************************************************************************ 
+ * Truthy and Falsy values and equality operators
+ */
+
+//falsy values: undefined, null, 0, ' ', NaN
+//truthy values: NOT falsy values
+
+// var height;
+
+// height = 23;
+
+// if (height || height === 0) {
+//     console.log('Variable is defined');
+// } else {
+//     console.log('Variable has NOT been defined');
+// }
+
+// //Equality Operators
+// if (height == '23') {
+//     console.log('The == operator does type coercion!');
+// }
+
+
+
+
+
+/************************************************************************ 
+ * Coding Challenge 2
+ */
+var johnsTeam = [89, 120, 103];
+var mikesTeam = [116, 94, 123]
+var johnsTeamG1 = 89;
+var johnsTeamG2 = 120;
+var johnsTeamG3 = 103;
+var mikesTeamG1 = 116;
+var mikesTeamG2 = 94;
+var mikesTeamG3 = 123;
+var johnsTeamAvg = ((johnsTeamG1 + johnsTeamG2 + johnsTeamG3) / 3)
+var mikesTeamAvg = ((mikesTeamG1 + mikesTeamG2 + mikesTeamG3) / 3)
+console.log(johnsTeamAvg)
+console.log(mikesTeamAvg)
