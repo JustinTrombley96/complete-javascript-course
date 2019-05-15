@@ -9,13 +9,10 @@
 
 // // job = 'Teacher';
 
-
-
-
 // // console.log(firstName, lastName, age, fullAge, job);
 
 // var firstName = "Justin";
-// var age = 28; 
+// var age = 28;
 
 // //Type Coercion
 
@@ -29,16 +26,12 @@
 
 // //Variable Mutation
 // age = 'twenty eight';
-// job = 'driver'; 
+// job = 'driver';
 
 // // alert(firstName + ' is a ' + age + ' year old ' + job + '. Is he married? ' + isMarried);
 
 // // var lastName = prompt("What is his last name?");
 // // console.log(firstName + ' ' + lastName);
-
-
-
-
 
 /************************************************************************
  *  Basic Operators
@@ -70,11 +63,7 @@
 // var x;
 // // console.log(typeof x);
 
-
-
-
-
-// /************************************************************************ 
+// /************************************************************************
 //  *  Operator Precedence
 // */
 
@@ -105,20 +94,15 @@
 
 // // More operators
 
-// // These two are the same because of precedence 
-// // x = x * 2; 
+// // These two are the same because of precedence
+// // x = x * 2;
 // // x *= 2;
 
-// console.log(x); 
+// console.log(x);
 // x += 10;
 // console.log(x)
 // x++; This adds 1.
 // x--; This subtracts 1.
-
-
-
-
-
 
 /************************************************************************ 
  * Coding Challenge 1
@@ -131,7 +115,6 @@
 // var markHeight = 70;
 // var johnHeight = 75;
 
-
 // function bmi (mass, height) {
 //     var bmi = mass / (height * height);
 //     return bmi;
@@ -140,7 +123,6 @@
 // markBmi = bmi (markMass, markHeight);
 // johnBmi =bmi (johnMass, johnHeight);
 // console.log(markBmi, johnBmi);
-
 
 // function compareBmi (person1, person2) {
 //     var compareBmi = person1 > person2;
@@ -159,13 +141,7 @@
 // console.log(johnBmi);
 // console.log(markBmi);
 
-
 // console.log ("Is Mark's BMI higher than John's? " + higherBmi);
-
-
-
-
-
 
 /************************************************************************
  * If / else statements
@@ -214,11 +190,6 @@
 //     console.log(firstName + ' is a man.')
 // }
 //And &&, OR ||, or Not !
-
-
-
-
-
 
 /************************************************************************ 
  * The Ternary Operator and Switch Statements
@@ -282,11 +253,6 @@
 //     console.log(firstName + ' is a man.')
 // }
 
-
-
-
-
-
 /************************************************************************ 
  * Truthy and Falsy values and equality operators
  */
@@ -309,22 +275,82 @@
 //     console.log('The == operator does type coercion!');
 // }
 
-
-
-
-
 /************************************************************************ 
  * Coding Challenge 2
  */
-var johnsTeam = [89, 120, 103];
-var mikesTeam = [116, 94, 123]
-var johnsTeamG1 = 89;
-var johnsTeamG2 = 120;
-var johnsTeamG3 = 103;
-var mikesTeamG1 = 116;
-var mikesTeamG2 = 94;
-var mikesTeamG3 = 123;
-var johnsTeamAvg = ((johnsTeamG1 + johnsTeamG2 + johnsTeamG3) / 3)
-var mikesTeamAvg = ((mikesTeamG1 + mikesTeamG2 + mikesTeamG3) / 3)
-console.log(johnsTeamAvg)
-console.log(mikesTeamAvg)
+
+// var johnsTeamAvg = (89 + 120 + 127) / 3;
+// var mikesTeamAvg = (116 + 94 + 126) / 3;
+// var marysTeamAvg = (97 + 134 + 154) / 3;
+// console.log(johnsTeamAvg);
+// console.log(mikesTeamAvg);
+// console.log(marysTeamAvg);
+
+// if (johnsTeamAvg > mikesTeamAvg && johnsTeamAvg > marysTeamAvg) {
+// 	console.log("John's team wins!");
+// } else if (johnsTeamAvg === mikesTeamAvg && johnsTeamAvg === marysTeamAvg) {
+// 	console.log('John, Mary and Mike all tied!');
+// } else if (johnsTeamAvg === mikesTeamAvg) {
+// 	console.log('John and Mike tied!');
+// } else if (johnsTeamAvg === marysTeamAvg) {
+// 	console.log('John and Mary tied!');
+// } else if (mikesTeamAvg === marysTeamAvg) {
+// 	console.log('Mike and Mary tied!');
+// } else if (mikesTeamAvg > johnsTeamAvg && mikesTeamAvg > marysTeamAvg) {
+// 	console.log("Mike's team wins!");
+// } else {
+// 	console.log("Mary's team wins!");
+// }
+
+/************************************************************************ 
+ * Functions
+ */
+
+// function calculateAge(birthYear) {
+// 	return 2018 - birthYear;
+// }
+
+// var ageJohn = calculateAge(1990);
+// var ageMike = calculateAge(1964);
+// var ageMary = calculateAge(1985);
+
+// console.log(ageJohn, ageMike, ageMary);
+
+// function yearsUntilRetirement(year, firstName) {
+// 	var age = calculateAge(year);
+// 	var retirement = 65 - age;
+
+// 	if (retirement > 0) {
+// 		console.log(firstName + ' retires in ' + retirement + ' years.');
+// 	} else {
+// 		console.log(firstName + ' is already retired.');
+// 	}
+// }
+
+// yearsUntilRetirement(1990, 'John');
+// yearsUntilRetirement(1952, 'Mike');
+// yearsUntilRetirement(1982, 'Jane');
+
+/************************************************************************ 
+ * Function Statements and Expressions
+ */
+//Function declaration
+//function whatDoYouDo(job, firstName) {}
+
+//Function Expression
+var whatDoYouDo = function(job, firstName) {
+	switch (job) {
+		case 'teacher':
+			return firstName + ' teaches kids how to code.';
+		case 'driver':
+			return firstName + ' drives a cab in Lisbon.';
+		case 'designer':
+			return firstName + ' desgins beautiful websites.';
+		default:
+			return firstName + ' does something else';
+	}
+};
+console.log(whatDoYouDo('teacher', 'John'));
+console.log(whatDoYouDo('designer', 'Mike'));
+console.log(whatDoYouDo('driver', 'Leo'));
+console.log(whatDoYouDo('', 'John'));
