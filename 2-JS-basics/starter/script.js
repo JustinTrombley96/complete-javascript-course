@@ -338,19 +338,120 @@
 //function whatDoYouDo(job, firstName) {}
 
 //Function Expression
-var whatDoYouDo = function(job, firstName) {
-	switch (job) {
-		case 'teacher':
-			return firstName + ' teaches kids how to code.';
-		case 'driver':
-			return firstName + ' drives a cab in Lisbon.';
-		case 'designer':
-			return firstName + ' desgins beautiful websites.';
-		default:
-			return firstName + ' does something else';
+// var whatDoYouDo = function(job, firstName) {
+// 	switch (job) {
+// 		case 'teacher':
+// 			return firstName + ' teaches kids how to code.';
+// 		case 'driver':
+// 			return firstName + ' drives a cab in Lisbon.';
+// 		case 'designer':
+// 			return firstName + ' desgins beautiful websites.';
+// 		default:
+// 			return firstName + ' does something else';
+// 	}
+// };
+// console.log(whatDoYouDo('teacher', 'John'));
+// console.log(whatDoYouDo('designer', 'Mike'));
+// console.log(whatDoYouDo('driver', 'Leo'));
+// console.log(whatDoYouDo('', 'John'));
+// console.log(whatDoYouDo('retired', 'Mark'));
+
+// /************************************************************************
+//  * Arrays
+
+//  */ // Initialize new array
+// var names = [ 'John', 'Mark', 'Jane' ];
+// var years = new Array(1990, 1969, 1948);
+
+// console.log(names[0]);
+// console.log(names);
+// console.log(names.length);
+
+// //Mutate Array Data
+// names[1] = 'Ben';
+// names[5] = 'Mary';
+// names[names.length] = 'Billy';
+// console.log(names);
+
+// // Different Data Type
+// var john = [ 'John', 'Smith', 1990, 'teacher', false ];
+// john.push('blue');
+// john.unshift('Mr.');
+// console.log(john);
+
+// john.pop();
+// john.pop();
+// john.shift();
+// console.log(john);
+
+// console.log(john.indexOf(1990));
+
+// var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John is a designer'
+// console.log(isDesigner)
+
+// /************************************************************************
+//  * Coding Challenge 3
+
+let johnBill1 = 124;
+var johnBill2 = 48;
+var johnBill3 = 268;
+var finalAmounts = [];
+var tips = [];
+
+if (johnBill1 < 50) {
+	tips.push(Math.round(johnBill1 * 0.2));
+	finalAmounts.push(johnBill1 * 1.2);
+} else if (johnBill1 < 200 && johnBill1 > 50) {
+	tips.push(Math.round(johnBill1 * 0.15));
+	finalAmounts.push(johnBill1 * 1.15);
+} else {
+	tips.push(Math.round(johnBill1 * 0.1));
+	finalAmounts.push(johnBill1 * 1.1);
+}
+
+if (johnBill2 < 50) {
+	tips.push(Math.round(johnBill2 * 0.2));
+	finalAmounts.push(johnBill2 * 1.2);
+} else if (johnBill2 < 200 && johnBill2 > 50) {
+	tips.push(Math.round(johnBill2 * 0.15));
+	finalAmounts.push(johnBill2 * 1.15);
+} else {
+	tips.push(Math.round(johnBill2 * 0.1));
+	finalAmounts.push(johnBill2 * 1.1);
+}
+
+if (johnBill3 < 50) {
+	tips.push(Math.round(johnBill3 * 0.2));
+	finalAmounts.push(johnBill3 * 1.2);
+} else if (johnBill3 < 200 && johnBill3 > 50) {
+	tips.push(Math.round(johnBill3 * 0.15));
+	finalAmounts.push(johnBill3 * 1.15);
+} else {
+	tips.push(Math.round(johnBill3 * 0.1));
+	finalAmounts.push(johnBill3 * 1.1);
+}
+
+console.log(finalAmounts);
+console.log(tips);
+
+// /************************************************************************
+//  * Coding Challenge 3 Professor Example
+
+function tipCalculator(bill) {
+	var percentage;
+	if (bill < 50) {
+		percentage = 0.2;
+	} else if (bill >= 50 && bill < 200) {
+		percentage = 0.15;
+	} else {
+		percentage = 0.1;
 	}
-};
-console.log(whatDoYouDo('teacher', 'John'));
-console.log(whatDoYouDo('designer', 'Mike'));
-console.log(whatDoYouDo('driver', 'Leo'));
-console.log(whatDoYouDo('', 'John'));
+	return percentage * bill;
+}
+
+var bills = [124, 48, 268];
+var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
+
+var finalValues = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(tips, finalValues);
