@@ -392,66 +392,66 @@
 // /************************************************************************
 //  * Coding Challenge 3
 
-let johnBill1 = 124;
-var johnBill2 = 48;
-var johnBill3 = 268;
-var finalAmounts = [];
-var tips = [];
+// let johnBill1 = 124;
+// var johnBill2 = 48;
+// var johnBill3 = 268;
+// var finalAmounts = [];
+// var tips = [];
 
-if (johnBill1 < 50) {
-	tips.push(Math.round(johnBill1 * 0.2));
-	finalAmounts.push(johnBill1 * 1.2);
-} else if (johnBill1 < 200 && johnBill1 > 50) {
-	tips.push(Math.round(johnBill1 * 0.15));
-	finalAmounts.push(johnBill1 * 1.15);
-} else {
-	tips.push(Math.round(johnBill1 * 0.1));
-	finalAmounts.push(johnBill1 * 1.1);
-}
+// if (johnBill1 < 50) {
+// 	tips.push(Math.round(johnBill1 * 0.2));
+// 	finalAmounts.push(johnBill1 * 1.2);
+// } else if (johnBill1 < 200 && johnBill1 > 50) {
+// 	tips.push(Math.round(johnBill1 * 0.15));
+// 	finalAmounts.push(johnBill1 * 1.15);
+// } else {
+// 	tips.push(Math.round(johnBill1 * 0.1));
+// 	finalAmounts.push(johnBill1 * 1.1);
+// }
 
-if (johnBill2 < 50) {
-	tips.push(Math.round(johnBill2 * 0.2));
-	finalAmounts.push(johnBill2 * 1.2);
-} else if (johnBill2 < 200 && johnBill2 > 50) {
-	tips.push(Math.round(johnBill2 * 0.15));
-	finalAmounts.push(johnBill2 * 1.15);
-} else {
-	tips.push(Math.round(johnBill2 * 0.1));
-	finalAmounts.push(johnBill2 * 1.1);
-}
+// if (johnBill2 < 50) {
+// 	tips.push(Math.round(johnBill2 * 0.2));
+// 	finalAmounts.push(johnBill2 * 1.2);
+// } else if (johnBill2 < 200 && johnBill2 > 50) {
+// 	tips.push(Math.round(johnBill2 * 0.15));
+// 	finalAmounts.push(johnBill2 * 1.15);
+// } else {
+// 	tips.push(Math.round(johnBill2 * 0.1));
+// 	finalAmounts.push(johnBill2 * 1.1);
+// }
 
-if (johnBill3 < 50) {
-	tips.push(Math.round(johnBill3 * 0.2));
-	finalAmounts.push(johnBill3 * 1.2);
-} else if (johnBill3 < 200 && johnBill3 > 50) {
-	tips.push(Math.round(johnBill3 * 0.15));
-	finalAmounts.push(johnBill3 * 1.15);
-} else {
-	tips.push(Math.round(johnBill3 * 0.1));
-	finalAmounts.push(johnBill3 * 1.1);
-}
+// if (johnBill3 < 50) {
+// 	tips.push(Math.round(johnBill3 * 0.2));
+// 	finalAmounts.push(johnBill3 * 1.2);
+// } else if (johnBill3 < 200 && johnBill3 > 50) {
+// 	tips.push(Math.round(johnBill3 * 0.15));
+// 	finalAmounts.push(johnBill3 * 1.15);
+// } else {
+// 	tips.push(Math.round(johnBill3 * 0.1));
+// 	finalAmounts.push(johnBill3 * 1.1);
+// }
 
-console.log(finalAmounts);
-console.log(tips);
+// console.log(finalAmounts);
+// console.log(tips);
 
-// /************************************************************************
-//  * Coding Challenge 3 Professor Example
+// // /************************************************************************
+// //  * Coding Challenge 3 Professor Example
 
-function tipCalculator(bill) {
-	var percentage;
-	if (bill < 50) {
-		percentage = 0.2;
-	} else if (bill >= 50 && bill < 200) {
-		percentage = 0.15;
-	} else {
-		percentage = 0.1;
-	}
-	return percentage * bill;
-}
+// function tipCalculator(bill) {
+// 	var percentage;
+// 	if (bill < 50) {
+// 		percentage = 0.2;
+// 	} else if (bill >= 50 && bill < 200) {
+// 		percentage = 0.15;
+// 	} else {
+// 		percentage = 0.1;
+// 	}
+// 	return percentage * bill;
+// }
 
-var bills = [124, 48, 268];
-var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
+// var bills = [124, 48, 268];
+// var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])]; 
 
-var finalValues = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// var finalValues = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(tips, finalValues);
+// console.log(tips, finalValues);
