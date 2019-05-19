@@ -500,38 +500,39 @@
 // 	},
 // };
 // john.calcAge();
-// // console.log(john);
-
-// john = {
-// 	fullName     : 'John Smith',
-// 	mass         : 150,
-// 	height       : 70,
-// 	calculateBmi : function() {
-// 		this.bmi = this.mass / (this.height * this.height);
-// 		return this.bmi;
-// 	},
-// };
-// john.calculateBmi();
 // console.log(john);
 
-// mark = {
-// 	fullName     : 'Mark Plyer',
-// 	mass         : 165,
-// 	height       : 75,
-// 	calculateBmi : function() {
-// 		this.bmi = this.mass / (this.height * this.height);
-// 		return this.bmi;
-// 	},
-// };
-// mark.calculateBmi();
-// console.log(mark);
+// // // /************************************************************************
+// // //  * Coding Challenge #4
 
-// if (mark.bmi > john.bmi) {
-// 	console.log(mark.fullName + ' has a higher BMI!');
-// } else if (mark.bmi === john.bmi) {
-// 	console.log('They both have the same BMI!');
-// } else {
-// 	console.log(john.fullName + ' has a higher BMI!');
-// }
+john = {
+	fullName     : 'John Smith',
+	mass         : 56.699,
+	height       : 1.6,
+	calculateBmi : function() {
+		this.bmi = this.mass / (this.height * this.height);
+		return this.bmi;
+	},
+};
+john.calculateBmi();
+console.log(john);
 
+mark = {
+	fullName     : 'Mark Plyer',
+	mass         : 58,
+	height       : 1.9,
+	calculateBmi : function() {
+		this.bmi = this.mass / (this.height * this.height);
+		return this.bmi;
+	},
+};
+mark.calculateBmi();
+console.log(mark);
 
+if (mark.bmi > john.bmi) {
+	console.log(mark.fullName + ' has a higher BMI!');
+} else if (mark.bmi === john.bmi) {
+	console.log('They both have the same BMI!');
+} else {
+	console.log(john.fullName + ' has a higher BMI!');
+}
