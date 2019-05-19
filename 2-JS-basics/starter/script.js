@@ -443,15 +443,95 @@
 // 		percentage = 0.2;
 // 	} else if (bill >= 50 && bill < 200) {
 // 		percentage = 0.15;
-// 	} else {
-// 		percentage = 0.1;
-// 	}
-// 	return percentage * bill;
+// // 	} else {
+// // 		percentage = 0.1;
+// // 	}
+// // 	return percentage * bill;
+// // }
+
+// // var bills = [124, 48, 268];
+// // var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])];
+
+// // var finalValues = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+// // console.log(tips, finalValues);
+
+// // // /************************************************************************
+// // //  * Objects and Properties
+
+// // Object Literal
+// var john = {
+// 	firstName : 'John',
+// 	lastName  : 'Smith',
+// 	birthYear : 1990,
+// 	family    : [ 'Jane', 'Mark', 'Bob', 'Emily' ],
+// 	job       : 'teacher',
+// 	isMarried : false,
+// };
+// console.log(john.firstName);
+// console.log(john['lastName']);
+// var x = 'birthYear';
+// console.log(john[x]);
+
+// john.job = 'designer';
+// john['isMarried'] = true;
+// console.log(john);
+
+// // New Object Syntax
+
+// var jane = new Object();
+// jane.name = 'Jane';
+// jane.birthYear = 1969;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+// // // /************************************************************************
+// // //  * Objects and Methods
+
+// var john = {
+// 	firstName : 'John',
+// 	lastName  : 'Smith',
+// 	birthYear : 1992,
+// 	family    : [ 'Jane', 'Mark', 'Bob', 'Emily' ],
+// 	job       : 'teacher',
+// 	isMarried : false,
+// 	calcAge   : function() {
+// 		this.age = 2018 - this.birthYear;
+// 	},
+// };
+// john.calcAge();
+// // console.log(john);
+
+// john = {
+// 	fullName     : 'John Smith',
+// 	mass         : 150,
+// 	height       : 70,
+// 	calculateBmi : function() {
+// 		this.bmi = this.mass / (this.height * this.height);
+// 		return this.bmi;
+// 	},
+// };
+// john.calculateBmi();
+// console.log(john);
+
+// mark = {
+// 	fullName     : 'Mark Plyer',
+// 	mass         : 165,
+// 	height       : 75,
+// 	calculateBmi : function() {
+// 		this.bmi = this.mass / (this.height * this.height);
+// 		return this.bmi;
+// 	},
+// };
+// mark.calculateBmi();
+// console.log(mark);
+
+// if (mark.bmi > john.bmi) {
+// 	console.log(mark.fullName + ' has a higher BMI!');
+// } else if (mark.bmi === john.bmi) {
+// 	console.log('They both have the same BMI!');
+// } else {
+// 	console.log(john.fullName + ' has a higher BMI!');
 // }
 
-// var bills = [124, 48, 268];
-// var tips = [tipCalculator(bills[0]), tipCalculator(bills[1]), tipCalculator(bills[2])]; 
 
-// var finalValues = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-
-// console.log(tips, finalValues);
