@@ -610,7 +610,7 @@
 // // // /************************************************************************
 // // //  * Coding Challenge 5
 
-var bills = [ 124, 48, 268, 180, 42 ];
+var bills = [124, 48, 268, 180, 42];
 var johnTips = [];
 var total = [];
 var allTips = [];
@@ -620,24 +620,24 @@ var allTips = [];
 // 10% = 200 < x
 
 for (var i = 0; i < bills.length; i++) {
-	if (bills[i] < 50) {
-		johnTips.push(bills[i] * 0.2);
-		allTips.push(bills[i] * 0.2);
-		total.push(bills[i] * 1.2);
-	} else if (50 <= bills[i] && bills[i] < 200) {
-		johnTips.push(bills[i] * 0.15);
-		allTips.push(bills[i] * 0.15);
-		total.push(bills[i] * 1.15);
-	} else {
-		johnTips.push(bills[i] * 0.1);
-		allTips.push(bills[i] * 0.1);
-		total.push(bills[i] * 1.1);
-	}
+    if (bills[i] < 50) {
+        johnTips.push(bills[i] * 0.2);
+        allTips.push(bills[i] * 0.2);
+        total.push(bills[i] * 1.2);
+    } else if (50 <= bills[i] && bills[i] < 200) {
+        johnTips.push(bills[i] * 0.15);
+        allTips.push(bills[i] * 0.15);
+        total.push(bills[i] * 1.15);
+    } else {
+        johnTips.push(bills[i] * 0.1);
+        allTips.push(bills[i] * 0.1);
+        total.push(bills[i] * 1.1);
+    }
 }
 console.log(johnTips);
 console.log(total);
 
-var markBills = [ 77, 375, 110, 45 ];
+var markBills = [77, 375, 110, 45];
 var markTips = [];
 var markTotal = [];
 //20% = x < 100
@@ -645,19 +645,19 @@ var markTotal = [];
 //25% = 300 < x
 
 for (var i = 0; i < markBills.length; i++) {
-	if (markBills[i] < 100) {
-		markTips.push(markBills[i] * 0.2);
-		allTips.push(markBills[i] * 0.2);
-		markTotal.push(markBills[i] * 1.2);
-	} else if (100 <= markBills[i] && markBills[i] < 300) {
-		markTips.push(markBills[i] * 0.1);
-		allTips.push(markBills[i] * 0.1);
-		markTotal.push(markBills[i] * 1.1);
-	} else {
-		markTips.push(markBills[i] * 0.25);
-		allTips.push(markBills[i] * 0.25);
-		markTotal.push(markBills[i] * 1.25);
-	}
+    if (markBills[i] < 100) {
+        markTips.push(markBills[i] * 0.2);
+        allTips.push(markBills[i] * 0.2);
+        markTotal.push(markBills[i] * 1.2);
+    } else if (100 <= markBills[i] && markBills[i] < 300) {
+        markTips.push(markBills[i] * 0.1);
+        allTips.push(markBills[i] * 0.1);
+        markTotal.push(markBills[i] * 1.1);
+    } else {
+        markTips.push(markBills[i] * 0.25);
+        allTips.push(markBills[i] * 0.25);
+        markTotal.push(markBills[i] * 1.25);
+    }
 }
 
 console.log(markTips);
@@ -667,7 +667,7 @@ console.log(allTips);
 //Average Overall Tip
 var total = 0;
 for (var i = 0; i < allTips.length; i++) {
-	total += allTips[i];
+    total += allTips[i];
 }
 var averageTip = total / allTips.length;
 
@@ -677,7 +677,7 @@ console.log(averageTip);
 
 var totalJ = 0;
 for (var i = 0; i < johnTips.length; i++) {
-	totalJ += johnTips[i];
+    totalJ += johnTips[i];
 }
 var averageJohnTip = totalJ / johnTips.length;
 
@@ -686,7 +686,7 @@ console.log(averageJohnTip);
 //Average Mark Tip
 var totalM = 0;
 for (var i = 0; i < markTips.length; i++) {
-	totalM += markTips[i];
+    totalM += markTips[i];
 }
 var averageMarkTip = totalM / markTips.length;
 
@@ -695,9 +695,9 @@ console.log(averageMarkTip);
 //Who has the higher average?
 
 if (averageJohnTip > averageMarkTip) {
-	console.log("John's family tips more than Mark's family!");
+    console.log("John's family tips more than Mark's family!");
 } else if (averageMarkTip > averageJohnTip) {
-	console.log("Mark's family tips more than John's family!");
+    console.log("Mark's family tips more than John's family!");
 } else {
-	console.log('Both families tipped the same amount!');
+    console.log('Both families tipped the same amount!');
 }
