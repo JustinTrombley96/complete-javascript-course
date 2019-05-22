@@ -15,12 +15,110 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
-document.querySelector('.btn-instructions').addEventListener('click', function () {
-    alert("The first person to get to 200 points wins! You can change the target score by typing a number into the 'Final Score' box. By pressing 'Roll Dice,' you will roll two dice. If you are happy with your score, you will press 'Hold,' this will end your turn and add your points to your total score. If you want to try and go for more points, you can continue rolling by pressing 'Roll Dice.' If either of your dice are a 1, your turn will end and you will receive no points for that round. If both dice are a 1, your total score will reset. If both dice are equal to six, you will receive double points for that roll. Good luck!")
-})
-document.querySelector('.btn-story').addEventListener('click', function () {
-    alert("1000 days on Dimension One is a long time. Leo likes to pass the time by making up different games and forcing Max to play them. He calls this one, 'Snake Eyes and Die.'")
-})
+// Modal Instructions
+
+var modal = document.getElementById('simpleModal');
+
+var modalBtn = document.getElementById('modalBtn');
+
+var closeBtn = document.getElementsByClassName('closeBtn')[0];
+
+modalBtn.addEventListener('click', openModal);
+
+closeBtn.addEventListener('click', closeModal);
+
+window.addEventListener('click', outsideClick);
+
+function openModal() {
+    modal.style.display = 'block'
+}
+
+function closeModal() {
+    modal.style.display = 'none'
+}
+
+function outsideClick(e) {
+    if (e.target == modal) {
+        modal.style.display = 'none'
+    }
+}
+
+//Modal Story
+
+var modal2 = document.getElementById('simpleModal2');
+
+var modalBtn2 = document.getElementById('modalBtn2');
+
+var closeBtn2 = document.getElementsByClassName('closeBtn2')[0];
+
+modalBtn2.addEventListener('click', openModal2);
+
+closeBtn2.addEventListener('click', closeModal2);
+
+window.addEventListener('click', outsideClick2);
+
+function openModal2() {
+    modal2.style.display = 'block'
+}
+
+function closeModal2() {
+    modal2.style.display = 'none'
+}
+
+function outsideClick2(e2) {
+    if (e2.target == modal2) {
+        modal2.style.display = 'none'
+    }
+}
+
+//Modal Snake Eyes
+
+var modal3 = document.getElementById('simpleModal3');
+
+var closeBtn3 = document.getElementsByClassName('closeBtn3')[0];
+
+closeBtn3.addEventListener('click', closeModal3);
+
+window.addEventListener('click', outsideClick3);
+
+function openModal3() {
+    modal3.style.display = 'block'
+}
+
+function closeModal3() {
+    modal3.style.display = 'none'
+}
+
+function outsideClick3(e3) {
+    if (e3.target == modal3) {
+        modal3.style.display = 'none'
+    }
+}
+
+//Modal Double Points
+
+var modal4 = document.getElementById('simpleModal4');
+
+var closeBtn4 = document.getElementsByClassName('closeBtn4')[0];
+
+closeBtn4.addEventListener('click', closeModal4);
+
+window.addEventListener('click', outsideClick4);
+
+function openModal4() {
+    modal4.style.display = 'block'
+}
+
+function closeModal4() {
+    modal4.style.display = 'none'
+}
+
+function outsideClick4(e4) {
+    if (e4.target == modal4) {
+        modal4.style.display = 'none'
+    }
+}
+
 document.querySelector('.btn-roll').addEventListener('click', function () {
     if (gamePlaying) {
 
@@ -38,16 +136,16 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
 
 
         //3. Update the round score IF the rolled number was NOT a 1
-        if (dice1 === 1 && dice2 === 1) {
+        if (dice1 === 1 && dice2 === 1 && scores[activePlayer] !== 0) {
             //Player looses score
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = '0'
-            alert("Snake Eyes! Your score has reset.")
+            openModal3()
             console.log(dice1, dice2)
             nextPlayer();
         } else if (dice1 === 6 && dice2 === 6) {
             roundScore += (dice1 + dice2 + dice1 + dice2)
-            alert("You've hit the jackpot! Double Points!")
+            openModal4()
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
             console.log(dice1, dice2)
         } else if (dice1 !== 1 && dice2 !== 1) {
@@ -149,6 +247,7 @@ function init() {
 
     document.getElementById('dice-1').style.display = 'none'
     document.getElementById('dice-2').style.display = 'none'
+    document.querySelector('.instructions').style.display = 'none'
 
     document.getElementById('score-0').textContent = '0';
     document.getElementById('score-1').textContent = '0';
