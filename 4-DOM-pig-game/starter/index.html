@@ -1,41 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="style.css">
-        
-        <title>Pig Game</title>
-    </head>
 
-    <body>
-        <div class="wrapper clearfix">
-            <div class="player-0-panel active">
-                <div class="player-name" id="name-0">Player 1</div>
-                <div class="player-score" id="score-0">43</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current</div>
-                    <div class="player-current-score" id="current-0">11</div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Snake Eyes and Die</title>
+</head>
+
+<body>
+    <div class="wrapper clearfix">
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Leo</div>
+            <div class="player-score" id="score-0">43</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">11</div>
             </div>
-            
-            <div class="player-1-panel">
-                <div class="player-name" id="name-1">Player 2</div>
-                <div class="player-score" id="score-1">72</div>
-                <div class="player-current-box">
-                    <div class="player-current-label">Current</div>
-                    <div class="player-current-score" id="current-1">0</div>
-                </div>
-            </div>
-            
-            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
-            <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
-            <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
-            
-            <img src="dice-5.png" alt="Dice" class="dice">
         </div>
-        
-        <script src="app.js"></script>
-    </body>
+
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Max</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+
+
+
+        <button class="btn-instructions" id="modalBtn"><i class="ion-ios-plus-outline"></i>Instructions</button>
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="closeBtn">&times;</span>
+                    <h2>Instructions</h2><br>
+                </div>
+                <div class="modal-body">
+                    <p>1. The first person to get to 200 points wins! You can change the target score by typing a number
+                        into the 'Final Score' box. </p><br>
+                    <p>2. By pressing 'Roll Dice,' you will roll two dice. If you are happy with your score, you will
+                        press 'Hold,' this will end your turn and add your points to your total score. If you want to
+                        try and go for more points, you can continue rolling by pressing 'Roll Dice.'</p><br>
+                    <p>3. If either of your dice are a 1, your turn will end and you will receive no points for that
+                        round. </p><br>
+                    <p>4. If both dice are a 1, your total score will reset. </p><br>
+                    <p>5. If both dice are equal to six, you will receive double points for that roll.</p><br>
+                </div>
+                <div class=modal-footer>
+                    <h3>Good luck!</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="btn-story" id="modalBtn2"><i class="ion-ios-plus-outline"></i>Story</button>
+        <div id="simpleModal2" class="modal2">
+            <div class="modal-content2">
+                <div class="modal-header2">
+                    <span class="closeBtn2">&times;</span>
+                    <h2>Story</h2><br>
+                </div>
+                <div class="modal-body2">
+                    <p>Leo Ryker is the Captain of Dimension One, fully funded by the United States government and his dad, President Ryker. Him and his crew are on a mission to Dystopia, to find a new planet for humans to inhabit. 1000 days on Dimension One is a long time. Leo likes to pass the time by making up different
+                        games and forcing the crew's Doctor, Max Hexley to play them. He calls this one, 'Snake Eyes and Die.' </p>
+                </div>
+                <div class="modal-footer2">
+                    <h3>Good luck!</h3>
+                </div>
+            </div>
+        </div>
+
+        <div id="simpleModal3" class="modal3">
+            <div class="modal-content3">
+                <div class="modal-header3">
+                    <span class="closeBtn3">&times;</span>
+                    <h2>Snake Eyes! Your score has been reset!</h2><br>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="simpleModal4" class="modal4">
+            <div class="modal-content4">
+                <div class="modal-header4">
+                    <span class="closeBtn4">&times;</span>
+                    <h2>Nice Roll! Double Points</h2><br>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button>
+
+
+        <div class="instructions"></div>
+
+        <button class="btn-roll"><i class="ion-ios-loop"></i>Roll dice</button>
+        <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
+
+        <input type="text" placeholder="Final Score" class="final-score">
+
+        <img src="dice-5.png" alt="Dice" class="dice" id="dice-1">
+        <img src="dice-5.png" alt="Dice" class="dice" id="dice-2">
+
+    </div>
+
+    <!-- <script src="app.js"></script> -->
+    <script src="challenges.js"></script>
+</body>
+
 </html>
